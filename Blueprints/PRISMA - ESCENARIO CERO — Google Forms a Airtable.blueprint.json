@@ -1,0 +1,1217 @@
+{
+    "name": "PRISMA | ESCENARIO CERO — Google Forms a Airtable",
+    "flow": [
+        {
+            "id": 1,
+            "module": "google-sheets:watchRows",
+            "version": 2,
+            "parameters": {
+                "from": "drive",
+                "mode": "select",
+                "limit": 1,
+                "sheetId": "Respuestas de formulario 1",
+                "__IMTCONN__": 11380470,
+                "spreadsheetId": "/16P1F-PltJ1PP8XDVfAJeGsIX3SFT74v4/19IoAbF4Yo49Fmb2mXvcYChRG4MwBmNpw/1fmR449B5TkKNqDmbGJlIY2RM9uz1DXxrgvLRiE7Eudw",
+                "tableFirstRow": "A1:Z1",
+                "includesHeaders": true,
+                "valueRenderOption": "FORMATTED_VALUE",
+                "dateTimeRenderOption": "FORMATTED_STRING"
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0
+                },
+                "setupValidation": {
+                    "result": {
+                        "valid": true,
+                        "fields": []
+                    },
+                    "version": 1,
+                    "configuration": "e656d0aede199cdd"
+                },
+                "restore": {
+                    "parameters": {
+                        "from": {
+                            "label": "My Drive"
+                        },
+                        "mode": {
+                            "label": "Search by path"
+                        },
+                        "sheetId": {
+                            "label": "Respuestas de formulario 1"
+                        },
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            },
+                            "label": "Rene's Google connection"
+                        },
+                        "spreadsheetId": {
+                            "path": [
+                                "CODERHOUSE - PYTHON",
+                                "Entrega final",
+                                "PRISMA — Respuestas de reclamos"
+                            ]
+                        },
+                        "includesHeaders": {
+                            "label": "Yes"
+                        },
+                        "valueRenderOption": {
+                            "mode": "chose",
+                            "label": "Formatted value"
+                        },
+                        "dateTimeRenderOption": {
+                            "mode": "chose",
+                            "label": "Formatted string"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google",
+                        "label": "Connection",
+                        "required": true
+                    },
+                    {
+                        "name": "mode",
+                        "type": "select",
+                        "label": "Search Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "select",
+                                "fromAll",
+                                "map"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "includesHeaders",
+                        "type": "select",
+                        "label": "Table contains headers",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                true,
+                                false
+                            ]
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "type": "uinteger",
+                        "label": "Limit",
+                        "required": true
+                    },
+                    {
+                        "name": "valueRenderOption",
+                        "type": "select",
+                        "label": "Value render option",
+                        "validate": {
+                            "enum": [
+                                "FORMATTED_VALUE",
+                                "UNFORMATTED_VALUE",
+                                "FORMULA"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "dateTimeRenderOption",
+                        "type": "select",
+                        "label": "Date and time render option",
+                        "validate": {
+                            "enum": [
+                                "SERIAL_NUMBER",
+                                "FORMATTED_STRING"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "from",
+                        "type": "select",
+                        "label": "Drive",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "spreadsheetId",
+                        "type": "file",
+                        "label": "Spreadsheet ID",
+                        "required": true
+                    },
+                    {
+                        "name": "sheetId",
+                        "type": "select",
+                        "label": "Sheet Name",
+                        "required": true
+                    },
+                    {
+                        "name": "tableFirstRow",
+                        "type": "text",
+                        "label": "Row with headers",
+                        "required": true
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "__ROW_NUMBER__",
+                        "type": "number",
+                        "label": "Row number"
+                    },
+                    {
+                        "name": "__SPREADSHEET_ID__",
+                        "type": "text",
+                        "label": "Spreadsheet ID"
+                    },
+                    {
+                        "name": "__SHEET__",
+                        "type": "text",
+                        "label": "Sheet"
+                    },
+                    {
+                        "name": "0",
+                        "type": "text",
+                        "label": "Marca temporal (A)"
+                    },
+                    {
+                        "name": "1",
+                        "type": "text",
+                        "label": "Asunto del reclamo (B)"
+                    },
+                    {
+                        "name": "2",
+                        "type": "text",
+                        "label": "Descripción del reclamo (C)"
+                    },
+                    {
+                        "name": "3",
+                        "type": "text",
+                        "label": "e-mail del vecino (D)"
+                    },
+                    {
+                        "name": "4",
+                        "type": "text",
+                        "label": "Unidad / sector (E)"
+                    },
+                    {
+                        "name": "5",
+                        "type": "text",
+                        "label": "Edificio (F)"
+                    },
+                    {
+                        "name": "6",
+                        "type": "text",
+                        "label": "(G)"
+                    },
+                    {
+                        "name": "7",
+                        "type": "text",
+                        "label": "(H)"
+                    },
+                    {
+                        "name": "8",
+                        "type": "text",
+                        "label": "(I)"
+                    },
+                    {
+                        "name": "9",
+                        "type": "text",
+                        "label": "(J)"
+                    },
+                    {
+                        "name": "10",
+                        "type": "text",
+                        "label": "(K)"
+                    },
+                    {
+                        "name": "11",
+                        "type": "text",
+                        "label": "(L)"
+                    },
+                    {
+                        "name": "12",
+                        "type": "text",
+                        "label": "(M)"
+                    },
+                    {
+                        "name": "13",
+                        "type": "text",
+                        "label": "(N)"
+                    },
+                    {
+                        "name": "14",
+                        "type": "text",
+                        "label": "(O)"
+                    },
+                    {
+                        "name": "15",
+                        "type": "text",
+                        "label": "(P)"
+                    },
+                    {
+                        "name": "16",
+                        "type": "text",
+                        "label": "(Q)"
+                    },
+                    {
+                        "name": "17",
+                        "type": "text",
+                        "label": "(R)"
+                    },
+                    {
+                        "name": "18",
+                        "type": "text",
+                        "label": "(S)"
+                    },
+                    {
+                        "name": "19",
+                        "type": "text",
+                        "label": "(T)"
+                    },
+                    {
+                        "name": "20",
+                        "type": "text",
+                        "label": "(U)"
+                    },
+                    {
+                        "name": "21",
+                        "type": "text",
+                        "label": "(V)"
+                    },
+                    {
+                        "name": "22",
+                        "type": "text",
+                        "label": "(W)"
+                    },
+                    {
+                        "name": "23",
+                        "type": "text",
+                        "label": "(X)"
+                    },
+                    {
+                        "name": "24",
+                        "type": "text",
+                        "label": "(Y)"
+                    },
+                    {
+                        "name": "25",
+                        "type": "text",
+                        "label": "(Z)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "airtable:ActionSearchRecords",
+            "version": 3,
+            "parameters": {
+                "__IMTCONN__": 11380746
+            },
+            "mapper": {
+                "base": "appCLWzIxdZcPyBv5",
+                "table": "tblmAOilol6yNgGKs",
+                "formula": "{NOMBRE DEL EDIFICIO} = \"{{1.`5`}}\"",
+                "maxRecords": "1",
+                "useColumnId": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 0
+                },
+                "setupValidation": {
+                    "result": {
+                        "valid": true,
+                        "fields": []
+                    },
+                    "version": 1,
+                    "configuration": "63d07c5dd06773f8"
+                },
+                "restore": {
+                    "expect": {
+                        "base": {
+                            "mode": "chose",
+                            "label": "PRISMA — Gestión Inteligente de Reclamos"
+                        },
+                        "sort": {
+                            "mode": "chose"
+                        },
+                        "view": {
+                            "mode": "chose",
+                            "label": "Empty"
+                        },
+                        "table": {
+                            "mode": "chose",
+                            "label": "EDIFICIOS"
+                        },
+                        "fields": {
+                            "mode": "chose"
+                        },
+                        "useColumnId": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "airtable3"
+                            },
+                            "label": "Rene's Airtable OAuth connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:airtable3,airtable2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "base",
+                        "type": "select",
+                        "label": "Base",
+                        "required": true
+                    },
+                    {
+                        "name": "useColumnId",
+                        "type": "boolean",
+                        "label": "Use Column ID",
+                        "required": true
+                    },
+                    {
+                        "name": "table",
+                        "type": "select",
+                        "label": "Table",
+                        "required": true
+                    },
+                    {
+                        "name": "formula",
+                        "type": "text",
+                        "label": "Formula"
+                    },
+                    {
+                        "name": "maxRecords",
+                        "type": "integer",
+                        "label": "Limit"
+                    },
+                    {
+                        "name": "sort",
+                        "spec": [
+                            {
+                                "name": "field",
+                                "type": "select",
+                                "label": "Field",
+                                "dynamic": true,
+                                "options": []
+                            },
+                            {
+                                "name": "direction",
+                                "type": "select",
+                                "label": "Direction",
+                                "options": [
+                                    {
+                                        "label": "Descending",
+                                        "value": "desc"
+                                    },
+                                    {
+                                        "label": "Ascending",
+                                        "value": "asc"
+                                    }
+                                ]
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Sort"
+                    },
+                    {
+                        "name": "view",
+                        "type": "select",
+                        "label": "View"
+                    },
+                    {
+                        "name": "fields",
+                        "type": "select",
+                        "label": "Output Fields",
+                        "multiple": true
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "__IMTLENGTH__",
+                        "type": "uinteger",
+                        "label": "Total number of bundles"
+                    },
+                    {
+                        "name": "__IMTINDEX__",
+                        "type": "uinteger",
+                        "label": "Bundle order position"
+                    },
+                    {
+                        "name": "id",
+                        "type": "text",
+                        "label": "ID"
+                    },
+                    {
+                        "name": "createdTime",
+                        "type": "date",
+                        "label": "Created Time"
+                    },
+                    {
+                        "name": "NOMBRE DEL EDIFICIO",
+                        "type": "text",
+                        "label": "NOMBRE DEL EDIFICIO"
+                    },
+                    {
+                        "name": "DIRECCIÓN",
+                        "type": "text",
+                        "label": "DIRECCIÓN"
+                    },
+                    {
+                        "name": "Assignee",
+                        "spec": [
+                            {
+                                "name": "id",
+                                "type": "text",
+                                "label": "ID"
+                            },
+                            {
+                                "name": "email",
+                                "type": "email",
+                                "label": "Email"
+                            },
+                            {
+                                "name": "name",
+                                "type": "text",
+                                "label": "Name"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Assignee"
+                    },
+                    {
+                        "name": "Status",
+                        "type": "text",
+                        "label": "Status"
+                    },
+                    {
+                        "name": "Attachments",
+                        "spec": [
+                            {
+                                "name": "id",
+                                "type": "text",
+                                "label": "ID"
+                            },
+                            {
+                                "name": "width",
+                                "type": "uinteger",
+                                "label": "Width"
+                            },
+                            {
+                                "name": "height",
+                                "type": "uinteger",
+                                "label": "Height"
+                            },
+                            {
+                                "name": "url",
+                                "type": "url",
+                                "label": "URL"
+                            },
+                            {
+                                "name": "filename",
+                                "type": "filename",
+                                "label": "File name"
+                            },
+                            {
+                                "name": "size",
+                                "type": "uinteger",
+                                "label": "Size"
+                            },
+                            {
+                                "name": "type",
+                                "type": "text",
+                                "label": "MIME type"
+                            },
+                            {
+                                "name": "thumbnails",
+                                "spec": [
+                                    {
+                                        "name": "small",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Small"
+                                    },
+                                    {
+                                        "name": "large",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Large"
+                                    },
+                                    {
+                                        "name": "full",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Full"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "Thumbnails"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Attachments"
+                    },
+                    {
+                        "name": "Attachment Summary",
+                        "type": "text",
+                        "label": "Attachment Summary"
+                    },
+                    {
+                        "name": "TICKETS DE RECLAMO",
+                        "spec": {
+                            "label": "Record ID"
+                        },
+                        "type": "array",
+                        "label": "TICKETS DE RECLAMO"
+                    },
+                    {
+                        "name": "ANTECEDENTES DE MANTENIMIENTO",
+                        "spec": {
+                            "label": "Record ID"
+                        },
+                        "type": "array",
+                        "label": "ANTECEDENTES DE MANTENIMIENTO"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "module": "airtable:ActionCreateRecord",
+            "version": 3,
+            "parameters": {
+                "__IMTCONN__": 11380967
+            },
+            "mapper": {
+                "base": "appCLWzIxdZcPyBv5",
+                "table": "tblYRzFuBj4fY6dID",
+                "record": {
+                    "fldFDwsyKK8anxKXJ": "{{1.`4`}}",
+                    "fldTgKWBjRWyx6jSZ": "Pendiente de IA",
+                    "fldg7fZXu3ydc7Wku": [
+                        "{{2.id}}"
+                    ],
+                    "fldhlQEYJQXh52Z0t": "{{1.`3`}}",
+                    "fldnY0FpkdUu1IXMJ": "{{1.`1`}}",
+                    "fldsBtuPsOCwitrvw": "{{1.`2`}}"
+                },
+                "typecast": false,
+                "useColumnId": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 0
+                },
+                "setupValidation": {
+                    "result": {
+                        "valid": true,
+                        "fields": []
+                    },
+                    "version": 1,
+                    "configuration": "c644cd88a6b86a2d"
+                },
+                "restore": {
+                    "expect": {
+                        "base": {
+                            "label": "PRISMA — Gestión Inteligente de Reclamos"
+                        },
+                        "table": {
+                            "label": "TICKETS DE RECLAMO",
+                            "nested": [
+                                {
+                                    "name": "record",
+                                    "spec": [
+                                        {
+                                            "name": "fldnY0FpkdUu1IXMJ",
+                                            "type": "text",
+                                            "label": "Asunto del reclamo"
+                                        },
+                                        {
+                                            "name": "fldsBtuPsOCwitrvw",
+                                            "type": "text",
+                                            "label": "Descripción del reclamo",
+                                            "multiline": true
+                                        },
+                                        {
+                                            "name": "fldhlQEYJQXh52Z0t",
+                                            "type": "text",
+                                            "label": "e-mail del vecino"
+                                        },
+                                        {
+                                            "name": "fldFDwsyKK8anxKXJ",
+                                            "type": "text",
+                                            "label": "Unidad / sector"
+                                        },
+                                        {
+                                            "name": "fldg7fZXu3ydc7Wku",
+                                            "spec": {
+                                                "label": "Record ID"
+                                            },
+                                            "type": "array",
+                                            "label": "Edificio"
+                                        },
+                                        {
+                                            "mode": "edit",
+                                            "name": "fldTgKWBjRWyx6jSZ",
+                                            "type": "select",
+                                            "label": "Estado",
+                                            "dynamic": true,
+                                            "options": [
+                                                {
+                                                    "label": "Pendiente de IA",
+                                                    "value": "Pendiente de IA"
+                                                },
+                                                {
+                                                    "label": "Procesando con IA",
+                                                    "value": "Procesando con IA"
+                                                },
+                                                {
+                                                    "label": "En revisión humana",
+                                                    "value": "En revisión humana"
+                                                },
+                                                {
+                                                    "label": "Aprobado para derivación técnica",
+                                                    "value": "Aprobado para derivación técnica"
+                                                },
+                                                {
+                                                    "label": "Derivado a mantenimiento",
+                                                    "value": "Derivado a mantenimiento"
+                                                },
+                                                {
+                                                    "label": "Aprobado para informar a guardia",
+                                                    "value": "Aprobado para informar a guardia"
+                                                },
+                                                {
+                                                    "label": "Guardia notificada",
+                                                    "value": "Guardia notificada"
+                                                },
+                                                {
+                                                    "label": "Error técnico",
+                                                    "value": "Error técnico"
+                                                },
+                                                {
+                                                    "label": "Vecino informado de las novedades de su reclamo",
+                                                    "value": "Vecino informado de las novedades de su reclamo"
+                                                }
+                                            ],
+                                            "validate": false
+                                        },
+                                        {
+                                            "name": "fld6ZBcKCh4eVb52H",
+                                            "spec": [
+                                                {
+                                                    "help": "Airtable will download the file at the given url and keep its own copy of it.",
+                                                    "name": "url",
+                                                    "type": "text",
+                                                    "label": "File URL"
+                                                },
+                                                {
+                                                    "help": "If empty, Airtable will generate the name automatically.",
+                                                    "name": "filename",
+                                                    "type": "filename",
+                                                    "label": "File name"
+                                                }
+                                            ],
+                                            "type": "array",
+                                            "label": "Evidencia adjunta",
+                                            "editable": true
+                                        },
+                                        {
+                                            "name": "fldaIpZMp1c69pmGA",
+                                            "type": "boolean",
+                                            "label": "Aprobado por humano"
+                                        },
+                                        {
+                                            "mode": "edit",
+                                            "name": "fldqIJHjCzD5unxgw",
+                                            "type": "select",
+                                            "label": "Tipo de tratamiento sugerido por IA",
+                                            "dynamic": true,
+                                            "options": [
+                                                {
+                                                    "label": "1 - Derivación técnica",
+                                                    "value": "1 - Derivación técnica"
+                                                },
+                                                {
+                                                    "label": "0 - Gestión informativa, sin derivación técnica",
+                                                    "value": "0 - Gestión informativa, sin derivación técnica"
+                                                }
+                                            ],
+                                            "validate": false
+                                        },
+                                        {
+                                            "name": "fldOzwsULzMfmKDKT",
+                                            "type": "text",
+                                            "label": "Fundamento de la recomendación de la IA",
+                                            "multiline": true
+                                        },
+                                        {
+                                            "name": "fldJjquRK02rKqoc6",
+                                            "type": "text",
+                                            "label": "Detalle de error técnico",
+                                            "multiline": true
+                                        },
+                                        {
+                                            "name": "fldQL0rUbyJWhCY6X",
+                                            "time": true,
+                                            "type": "date",
+                                            "label": "Fecha última ejecución"
+                                        }
+                                    ],
+                                    "type": "collection",
+                                    "label": "Record"
+                                }
+                            ]
+                        },
+                        "record": {
+                            "nested": {
+                                "fld6ZBcKCh4eVb52H": {
+                                    "mode": "chose"
+                                },
+                                "fldTgKWBjRWyx6jSZ": {
+                                    "mode": "chose",
+                                    "label": "Pendiente de IA"
+                                },
+                                "fldaIpZMp1c69pmGA": {
+                                    "mode": "chose"
+                                },
+                                "fldg7fZXu3ydc7Wku": {
+                                    "mode": "chose",
+                                    "items": [
+                                        null
+                                    ]
+                                },
+                                "fldqIJHjCzD5unxgw": {
+                                    "mode": "edit"
+                                }
+                            }
+                        },
+                        "typecast": {
+                            "mode": "chose"
+                        },
+                        "useColumnId": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "airtable3"
+                            },
+                            "label": "Rene's Airtable OAuth connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:airtable3,airtable2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "base",
+                        "type": "select",
+                        "label": "Base",
+                        "required": true
+                    },
+                    {
+                        "name": "typecast",
+                        "type": "boolean",
+                        "label": "Smart links",
+                        "required": true
+                    },
+                    {
+                        "name": "useColumnId",
+                        "type": "boolean",
+                        "label": "Use Column ID",
+                        "required": true
+                    },
+                    {
+                        "name": "table",
+                        "type": "select",
+                        "label": "Table",
+                        "required": true
+                    },
+                    {
+                        "name": "record",
+                        "spec": [
+                            {
+                                "name": "fldnY0FpkdUu1IXMJ",
+                                "type": "text",
+                                "label": "Asunto del reclamo"
+                            },
+                            {
+                                "name": "fldsBtuPsOCwitrvw",
+                                "type": "text",
+                                "label": "Descripción del reclamo"
+                            },
+                            {
+                                "name": "fldhlQEYJQXh52Z0t",
+                                "type": "text",
+                                "label": "e-mail del vecino"
+                            },
+                            {
+                                "name": "fldFDwsyKK8anxKXJ",
+                                "type": "text",
+                                "label": "Unidad / sector"
+                            },
+                            {
+                                "name": "fldg7fZXu3ydc7Wku",
+                                "spec": {
+                                    "name": "value",
+                                    "label": "Record ID"
+                                },
+                                "type": "array",
+                                "label": "Edificio"
+                            },
+                            {
+                                "mode": "edit",
+                                "name": "fldTgKWBjRWyx6jSZ",
+                                "type": "select",
+                                "label": "Estado"
+                            },
+                            {
+                                "name": "fld6ZBcKCh4eVb52H",
+                                "spec": [
+                                    {
+                                        "name": "url",
+                                        "type": "text",
+                                        "label": "File URL"
+                                    },
+                                    {
+                                        "name": "filename",
+                                        "type": "filename",
+                                        "label": "File name"
+                                    }
+                                ],
+                                "type": "array",
+                                "label": "Evidencia adjunta"
+                            },
+                            {
+                                "name": "fldaIpZMp1c69pmGA",
+                                "type": "boolean",
+                                "label": "Aprobado por humano"
+                            },
+                            {
+                                "mode": "edit",
+                                "name": "fldqIJHjCzD5unxgw",
+                                "type": "select",
+                                "label": "Tipo de tratamiento sugerido por IA"
+                            },
+                            {
+                                "name": "fldOzwsULzMfmKDKT",
+                                "type": "text",
+                                "label": "Fundamento de la recomendación de la IA"
+                            },
+                            {
+                                "name": "fldJjquRK02rKqoc6",
+                                "type": "text",
+                                "label": "Detalle de error técnico"
+                            },
+                            {
+                                "name": "fldQL0rUbyJWhCY6X",
+                                "time": true,
+                                "type": "date",
+                                "label": "Fecha última ejecución"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Record"
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "id",
+                        "type": "text",
+                        "label": "ID"
+                    },
+                    {
+                        "name": "createdTime",
+                        "type": "date",
+                        "label": "Created Time"
+                    },
+                    {
+                        "name": "Asunto del reclamo",
+                        "type": "text",
+                        "label": "Asunto del reclamo"
+                    },
+                    {
+                        "name": "Descripción del reclamo",
+                        "type": "text",
+                        "label": "Descripción del reclamo",
+                        "multiline": true
+                    },
+                    {
+                        "name": "e-mail del vecino",
+                        "type": "text",
+                        "label": "e-mail del vecino"
+                    },
+                    {
+                        "name": "Unidad / sector",
+                        "type": "text",
+                        "label": "Unidad / sector"
+                    },
+                    {
+                        "name": "Edificio",
+                        "spec": {
+                            "label": "Record ID"
+                        },
+                        "type": "array",
+                        "label": "Edificio"
+                    },
+                    {
+                        "name": "Nombre del edificio",
+                        "type": "array",
+                        "label": "Nombre del edificio"
+                    },
+                    {
+                        "name": "Estado",
+                        "type": "text",
+                        "label": "Estado"
+                    },
+                    {
+                        "name": "Evidencia adjunta",
+                        "spec": [
+                            {
+                                "name": "id",
+                                "type": "text",
+                                "label": "ID"
+                            },
+                            {
+                                "name": "width",
+                                "type": "uinteger",
+                                "label": "Width"
+                            },
+                            {
+                                "name": "height",
+                                "type": "uinteger",
+                                "label": "Height"
+                            },
+                            {
+                                "name": "url",
+                                "type": "url",
+                                "label": "URL"
+                            },
+                            {
+                                "name": "filename",
+                                "type": "filename",
+                                "label": "File name"
+                            },
+                            {
+                                "name": "size",
+                                "type": "uinteger",
+                                "label": "Size"
+                            },
+                            {
+                                "name": "type",
+                                "type": "text",
+                                "label": "MIME type"
+                            },
+                            {
+                                "name": "thumbnails",
+                                "spec": [
+                                    {
+                                        "name": "small",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Small"
+                                    },
+                                    {
+                                        "name": "large",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Large"
+                                    },
+                                    {
+                                        "name": "full",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Full"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "Thumbnails"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Evidencia adjunta"
+                    },
+                    {
+                        "name": "Aprobado por humano",
+                        "type": "boolean",
+                        "label": "Aprobado por humano"
+                    },
+                    {
+                        "name": "Tipo de tratamiento sugerido por IA",
+                        "type": "text",
+                        "label": "Tipo de tratamiento sugerido por IA"
+                    },
+                    {
+                        "name": "Fundamento de la recomendación de la IA",
+                        "type": "text",
+                        "label": "Fundamento de la recomendación de la IA",
+                        "multiline": true
+                    },
+                    {
+                        "name": "Detalle de error técnico",
+                        "type": "text",
+                        "label": "Detalle de error técnico",
+                        "multiline": true
+                    },
+                    {
+                        "name": "Fecha última ejecución",
+                        "time": true,
+                        "type": "date",
+                        "label": "Fecha última ejecución"
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "us2.make.com",
+        "notes": []
+    }
+}
