@@ -38,7 +38,7 @@ La base de datos de Airtable exigida por la consigna está disponible en el sigu
 
 - **Base de datos Airtable:** https://airtable.com/appCLWzIxdZcPyBv5/shrMXBaLE6mHzWOR6
 
-  ### Dashboard de control
+### Dashboard de control
 El dashboard o tablero de control, requerido según la consigna, está disponible en el siguiente enlace de acceso compartido:
 
 - **Dashboard de control:** https://drive.google.com/file/d/15umiD0hTj3yBR1hdUgP3g8cMi5OaNkgZ/view?usp=sharing
