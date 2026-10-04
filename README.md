@@ -22,6 +22,10 @@ Escenarios de Make exportados en formato JSON:
 ### Screenshots
 Capturas de pantalla (41 imágenes) que sirven como evidencia del funcionamiento. También están incluidas, con su explicación en texto, dentro del PDF PRISMA_Entregable_Complementario_Enlaces_y_Pruebas_v2.pdf.
 
+### Documento integrador
+El acceso directo al documento integrador de los entregables de este trabajo final es compartido a continuación:
+
+- **Documento integrador:** https://drive.google.com/file/d/1uLRHQJT9QIZGdLjw9e7WfBwtAXZHr2xM/view?usp=drive_link
 
 ### Videos de prueba
 Los videos de prueba exigidos por la consigna no están incluidos en este repositorio por su tamaño. Están alojados en Google Drive, con acceso libre para cualquier persona que tenga el enlace:
@@ -33,3 +37,8 @@ Los videos de prueba exigidos por la consigna no están incluidos en este reposi
 La base de datos de Airtable exigida por la consigna está disponible en el siguiente enlace de acceso compartido:
 
 - **Base de datos Airtable:** https://airtable.com/appCLWzIxdZcPyBv5/shrMXBaLE6mHzWOR6
+
+  ### Dashboard de control
+El dashboard o tablero de control, requerido según la consigna, está disponible en el siguiente enlace de acceso compartido:
+
+- **Dashboard de control:** https://drive.google.com/file/d/15umiD0hTj3yBR1hdUgP3g8cMi5OaNkgZ/view?usp=sharing
