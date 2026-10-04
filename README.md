@@ -27,3 +27,8 @@ Los videos de prueba exigidos por la consigna no están incluidos en este reposi
 
 - **Video 1:** https://drive.google.com/file/d/1mwIlF9FNBF84eOvkwuxHxw-e0axwvD01/view
 - **Video 2:** https://drive.google.com/file/d/13M-v0zJVE0nrkcMoQsNwVPveh1vT0DG2/view
+
+### Base de datos (Airtable)
+La base de datos de Airtable exigida por la consigna está disponible en el siguiente enlace de acceso compartido:
+
+- **Base de datos Airtable:** https://airtable.com/appCLWzIxdZcPyBv5/shrMXBaLE6mHzWOR6
