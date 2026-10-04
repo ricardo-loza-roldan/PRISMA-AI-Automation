@@ -17,6 +17,7 @@ Escenarios de Make exportados en formato JSON:
 4. Seguridad y resiliencia.
 5. Dashboard de control.
 6. Complementario: enlaces y pruebas.
+7. 7. Entrega final integral con Blueprints.
 
 ### Screenshots
 Capturas de pantalla (41 imágenes) que sirven como evidencia del funcionamiento. También están incluidas, con su explicación en texto, dentro del PDF PRISMA_Entregable_Complementario_Enlaces_y_Pruebas_v2.pdf.
