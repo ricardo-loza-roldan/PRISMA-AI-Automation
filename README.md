@@ -10,22 +10,26 @@ Escenarios de Make exportados en formato JSON:
 - **Escenario 1:** Análisis con IA y revisión humana de reclamos.
 - **Escenario 2:** Ejecución operativa posterior a la aprobación humana.
 
-### PDFs_Entregables
+### Entregables
+Documentos del proyecto en formato PDF, en la carpeta `Entregables`:
 1. Diagrama de arquitectura.
 2. Manual operativo y datos.
 3. Matriz de costos.
 4. Seguridad y resiliencia.
 5. Dashboard de control.
-6. Complementario: enlaces y pruebas.
-7. Entrega final integral con Blueprints.
+6. Capturas de prueba y Blueprints.
+7. Enlaces.
+8. Documento integral: gestión de consorcios.
+
+> **Nota:** El contenido de los entregables 1 a 7 está integrado en un único documento PDF: `Prisma_Gestion_de_Consorcios_DOC_Integral.pdf` (ítem 8).
 
 ### Screenshots
-Capturas de pantalla (41 imágenes) que sirven como evidencia del funcionamiento. También están incluidas, con su explicación en texto, dentro del PDF PRISMA_Entregable_Complementario_Enlaces_y_Pruebas_v2.pdf.
+Capturas de pantalla (41 imágenes) que sirven como evidencia del funcionamiento. También están incluidas, con su explicación en texto, dentro del PDF PRISMA_Capturas_de_prueba_y_Blueprints.pdf, en la carpeta Entregables (ítem 6).
 
-### Documento integrador
-El acceso directo al documento integrador de los entregables de este trabajo final es compartido a continuación:
+### Documento integral
+El acceso directo al documento integral de este trabajo final es compartido a continuación:
 
-- **Documento integrador:** https://drive.google.com/file/d/1uLRHQJT9QIZGdLjw9e7WfBwtAXZHr2xM/view?usp=drive_link
+- **Documento integral:** https://drive.google.com/file/d/1za9iaixLd5zEqLB_Tr1mzLUlOY8Pwamc/view?usp=sharing
 
 ### Videos de prueba
 Los videos de prueba exigidos por la consigna no están incluidos en este repositorio por su tamaño. Están alojados en Google Drive, con acceso libre para cualquier persona que tenga el enlace:
